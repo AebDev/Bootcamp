@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <article>
+        <h1> Some Facts </h1>
+        <h2> The Chocolate </h2>
+        <h3> History of the chocolate </h3>
+        <p> Chocolate is made from tropical Theobroma cacao tree seeds.
+            Its earliest use dates back to the Olmec civilization in Mesoamerica.</p>
+        <p> After the European discovery of the Americas, chocolate became
+            very popular in the wider world, and its demand exploded. </p>
+        <p> Chocolate has since become a popular food product that millions enjoy every day,
+            thanks to its unique, rich, and sweet taste.</p>
+        <p> But what effect does eating chocolate have on our health?</p>
+    </article>
+    <input type="button" id="btn" value="click">
+
+    <script>
+        let h1 = document.querySelectorAll("h1")[0];
+        console.log(h1);
+
+        let artice = document.querySelectorAll("article")[0];
+        artice.removeChild(artice.querySelector("p:last-child"));
+
+        let h2 = document.querySelector("h2");
+
+        h2.addEventListener("click", (e) => {
+            e.target.style.background = "red";
+        });
+
+        let h3 = document.querySelector("h3");
+
+        h3.addEventListener("click", (e) => {
+            e.target.style.display = "none";
+        });
+
+        let btn = document.getElementById("btn");
+
+        let p = document.querySelectorAll("p");
+
+        btn.addEventListener("click", () => {
+            p.forEach(element => {
+                element.style.fontWeight = " bold";
+            });
+
+        });
+
+        h1.addEventListener("mouseover", (e) => {
+            let fs = parseInt(Math.random() * 100);
+            e.target.style.fontSize = fs + "px";
+        });
+
+        p[1].addEventListener("mouseover", (e) => {
+            e.target.style.opacity = "0";
+            e.target.style.transition = "0.5s";
+        });
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

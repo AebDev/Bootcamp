@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="firstname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lastname"><br><br>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+    <ul class="usersAnswer"></ul>
+
+    <script>
+
+        let form = document.forms[0];
+        console.log(form);
+
+        let fname = document.getElementById("fname");
+        console.log(fname);
+
+        let lname = document.getElementById("lname");
+        console.log(lname);
+
+        let submit = document.getElementById("submit");
+        console.log(submit);
+
+        let firstname = document.querySelector("input[name='firstname']");
+        console.log(firstname);
+
+        let lastname = document.querySelector("input[name='lastname']");
+        console.log(lastname);
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+
+            if (fname.value == "" || lname.value == "") {
+                alert("Please enter your first and last name");
+                fname.setAttribute("required", "required");
+                lname.setAttribute("required", "required");
+
+            } else {
+                let ul = document.createElement("ul");
+                let info = new FormData(form);
+
+                Array.from(info.entries()).forEach(element => {
+                    let li = document.createElement("li");
+                    li.textContent = `${element[0]}: ${element[1]}`;
+                    ul.appendChild(li);
+                });
+
+                document.body.appendChild(ul);
+            }
+
+        });
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
