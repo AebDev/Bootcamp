@@ -30,10 +30,10 @@ function addNewTask() {
 
         newTask.value = "";
         remove.addEventListener("click", () => {
-
+            tasks.splice(tasks.indexOf(div.children[2].textContent), 1);
             panel.removeChild(div);
-            console.log(newTask.value);
-            tasks.splice(tasks.indexOf(newTask.value), 1);
+
+            console.log(tasks);
 
         });
 
