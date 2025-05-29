@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <style type="text/css">
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="Exercise_1.html" method="get">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name">
+        <label for="comment">Comments</label>
+        <textarea name="comment" id="comment" rows="5" c placeholder="Enter your comment..."></textarea>
+        <button type="submit">Send</button>
+
+    </form>
+    <!-- Data will be sent on the url with the GET method after '?' : 
+ http://127.0.0.1:5500/Week_4/Day_4/Exercises/Exercises_XP/Exercise_1.html?name=test&comment=sent%0D%0A++++ -->
+</body>
+
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily challenge : HTML Form</title>
+</head>
+<form action="." id="form">
+    <input type="text" name="name" id="name" placeholder="Enter your name">
+    <input type="text" name="lastname" id="lastname" placeholder="Enter your lastname">
+    <button type="submit" id="submit">Send</button>
+</form>
+<p id="result"></p>
+
+<body>
+    <script>
+
+        form = document.getElementById("form");
+        result = document.getElementById("result");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            let data = new FormData(form);
+            result.innerHTML = JSON.stringify(Object.fromEntries(data));
+        })
+
+    </script>
+</body>
+
+</html>
