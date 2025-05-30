@@ -1,0 +1,73 @@
+ @import url('https://fonts.cdnfonts.com/css/sega-logo-font');
+
+ body {
+     font-family: 'Sega Logo Font', sans-serif;
+     margin: 0;
+     background-image: url('./images/circuit-pattern.png');
+ }
+
+ #header {
+     display: flex;
+     align-items: center;
+     height: 15vh;
+     background: rgba(0, 255, 166, 0.66);
+
+ }
+
+ #title {
+     flex-grow: 1;
+    margin-right: 20px;
+     font-size: 25px;
+ }
+
+ #search {
+    flex-grow: 5;
+     margin-right: 20px;
+     padding: 5px;
+     font-size: 20px;
+     
+ }
+
+ #container {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     font-size: 20px;
+     font-weight: 600;
+     min-height: 85vh;
+     background: rgba(195, 0, 255, 0.825);
+ }
+
+ .cards {
+    background-image: url('images/card-pattern.png');
+    
+    background-color: rgb(0, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+ }
+
+ .picture{
+    background-color: rgb(13, 0, 107);
+    border-radius: 50%;
+    margin: 10px;
+ }
+ .info{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    align-self: start;
+ }
+
+ .name{
+    font-weight: bold;
+    margin-bottom: 0px;
+ }
+
+ .email{
+    font-size: 16px;
+    margin-top: 0px;
+ }
