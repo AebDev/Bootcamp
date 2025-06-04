@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Times</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: calc(100% - 120px);
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #results {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #results p {
+            margin: 8px 0;
+            font-size: 1.1em;
+        }
+
+        .error-message {
+            color: #d9534f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sunrise Times for Two Cities</h1>
+
+    <form id="sunriseForm">
+        <h2>City 1</h2>
+        <label for="lat1">Latitude:</label>
+        <input type="text" id="lat1" name="lat1" placeholder="e.g., 36.7201600" required><br>
+        <label for="lng1">Longitude:</label>
+        <input type="text" id="lng1" name="lng1" placeholder="e.g., -4.4203400" required><br>
+
+        <h2>City 2</h2>
+        <label for="lat2">Latitude:</label>
+        <input type="text" id="lat2" name="lat2" placeholder="e.g., 40.712776" required><br>
+        <label for="lng2">Longitude:</label>
+        <input type="text" id="lng2" name="lng2" placeholder="e.g., -74.005974" required><br>
+
+        <button type="submit">Get Sunrise Times</button>
+    </form>
+
+    <div id="results">
+        <p>Enter latitude and longitude for two cities and click "Get Sunrise Times".</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
