@@ -62,8 +62,11 @@ power.addEventListener('click', () => {
     powerSwitch = !powerSwitch;
     if (powerSwitch)
         getPokeData();
-    else
+    else {
         screen.src = '';
+        description.innerHTML = '';
+    }
+
 });
 
 next.addEventListener('click', nextPoke);
