@@ -1,0 +1,9 @@
+{
+    "type": "module",
+    "name": "todoapp",
+    "version": "1.0.0",
+    "main": "app.js",
+    "scripts": {
+        "start": "node --experimental-modules app.js"
+    }
+}
