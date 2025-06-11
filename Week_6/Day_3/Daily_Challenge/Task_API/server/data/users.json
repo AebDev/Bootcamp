@@ -1,18 +1,1 @@
-[
-  {
-    "id": 1,
-    "first_name": "testx",
-    "last_name": "test",
-    "email": "test@test.com",
-    "username": "test",
-    "password": "$2b$10$E6KvYaGvhc4whae"
-  },
-  {
-    "id": 2,
-    "first_name": "test",
-    "last_name": "test",
-    "email": "test@test.com",
-    "username": "noir",
-    "password": "$2b$10$x7h0MjwoHnRX8Afd/K11UOkWoGgwAsfGa63aRZJuqHZKVr/C4whae"
-  }
-]
+[]
