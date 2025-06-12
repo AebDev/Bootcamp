@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Real-Time Chat</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="username-container">
+        <h2>Enter Username and Room</h2>
+        <input type="text" id="username" placeholder="Username" />
+        <input type="text" id="room" placeholder="Room Name" />
+        <button id="join-btn">Join Chat</button>
+    </div>
+
+    <div id="chat-container" class="hidden">
+        <div id="room-info">
+            <h3>Room: <span id="room-name"></span></h3>
+            <h4>Active Users:</h4>
+            <ul id="users"></ul>
+        </div>
+
+        <div id="chat-box">
+            <ul id="messages"></ul>
+            <form id="message-form">
+                <input id="message-input" autocomplete="off" placeholder="Type a message..." />
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
