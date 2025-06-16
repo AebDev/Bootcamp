@@ -1,0 +1,38 @@
+/* Status indicators */
+.status-active {
+    color: #28a745;
+    /* Green for active players */
+    font-weight: bold;
+}
+
+.status-eliminated {
+    color: #dc3545;
+    /* Red for eliminated players */
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+/* Player status display */
+#game-info p {
+    margin: 8px 0;
+}
+
+#player1-status,
+#player2-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    min-width: 80px;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+/* Enhanced board styling */
+.cell {
+    transition: background-color 0.3s ease;
+}
+
+.player1:hover,
+.player2:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}

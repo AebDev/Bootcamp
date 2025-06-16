@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Strategy Game</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #game-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(10, 40px);
+            grid-template-rows: repeat(10, 40px);
+            gap: 2px;
+            margin: 20px auto;
+        }
+
+        .cell {
+            width: 40px;
+            height: 40px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+        }
+
+        .obstacle {
+            background-color: #333;
+        }
+
+        .player1 {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .player2 {
+            background-color: #28a745;
+            color: white;
+        }
+
+        #controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 10px;
+        }
+
+        #status {
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        #game-info {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Multiplayer Strategy Game</h1>
+
+    <form id="setup">
+        <div id="setup-form">
+            <label for="player1">Player 1 Name:</label>
+            <input type="text" id="player1" required>
+            <label for="player2">Player 2 Name:</label>
+            <input type="text" id="player2" required>
+            <button id="start-game">Start Game</button>
+        </div>
+    </form>
+
+    <div id="game-container">
+        <div id="game-info">
+            <p>Current Turn: <span id="current-turn"></span></p>
+            <p id="status"></p>
+            <p>Player 1 Status: <span id="player1-status"></span></p>
+            <p>Player 2 Status: <span id="player2-status"></span></p>
+        </div>
+
+        <div class="grid" id="game-board"></div>
+
+        <div id="controls">
+            <button id="up">↑ Up</button>
+            <button id="left">← Left</button>
+            <button id="down">↓ Down</button>
+            <button id="right">→ Right</button>
+            <button id="attack" class="attack-btn">⚔️ Attack</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
