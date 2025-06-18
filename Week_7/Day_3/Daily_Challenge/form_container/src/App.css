@@ -1,0 +1,64 @@
+.app {
+  font-size: 16px;
+}
+
+.app-header {
+  background-color: black;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.form {
+  background-color: #DEB887;
+  padding: 10px;
+}
+
+input {
+  height: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select {
+  width: 250px;
+  height: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+
+.show {
+  background-color: #1E5555;
+  color: white;
+  padding: 10px;
+}
+
+.info {
+  display: flex;
+}
+
+.info>p {
+  margin: 5px;
+}
+
+.restrictions {
+  padding-left: 30px;
+}
